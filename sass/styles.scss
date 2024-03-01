@@ -8,7 +8,7 @@ $DarkDesaturatedCyan : hsl(167, 40%, 24%);
 // (photography text)
 $DarkBlue : hsl(198, 62%, 26%);
 // (footer)
-$DarkModerateCyan : hsl(168, 34%, 41%);
+$DarkModerateCyan : hsla(168, 34%, 41%, 0.7);
 
 // ### Neutral
 
@@ -30,6 +30,7 @@ body {
         height: 100vh;
         text-decoration: none;
         list-style-type: none;
+        width: 100vw;
         h1,h2,h3,h4,h5,h6{
         font-family: "Fraunces", serif;
     }
@@ -180,6 +181,7 @@ header {
             text-align: left;
             margin-bottom: 1rem;
             width:60%;
+            color:$VeryDarkGrayishBlue;
         }
         a{
             margin-left:17%;
@@ -189,7 +191,9 @@ header {
             margin-bottom: 1rem;
             text-decoration: none;
             color: black;
-            
+            width:fit-content;
+            padding:0.5rem;
+            padding-bottom: 0;
         }
     }
 
@@ -197,4 +201,295 @@ header {
         width:50%;
     }
 
+}
+
+.services1 {
+    div a{
+        border-bottom: 4px solid $Yellow;
+    }
+}
+.services2 {
+    div a{
+        border-bottom: 4px solid $SoftRed;
+    }
+}
+
+.services3 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    h3{
+        font-weight: bolder;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        
+    }
+
+    #subservice1 {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding-top: 35rem;
+        padding-bottom: 3rem;
+        gap:2rem;
+        width:50%;
+        background: url(../images/desktop/image-graphic-design.jpg) no-repeat; 
+        background-size: 100% 100%; 
+
+        p{
+            text-align: center;
+            letter-spacing: -0.1rem;
+            width:55%; 
+        }
+    }
+
+    #subservice2 {
+        width:50%;
+        background: url(../images/desktop/image-photography.jpg) no-repeat;
+        background-size: 100% 100%; 
+        padding-top: 35rem;
+        padding-bottom: 3rem;
+
+        p{
+            text-align: center;
+            letter-spacing: -0.1rem;
+            width:55%;
+            
+        }
+    }
+    
+}
+
+.testimonials{
+    
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    padding-top:12%;
+    gap: 7%;
+
+    h2{
+        color: $GrayishBlue;
+        // margin-left:50%;
+        font-weight: 1200;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        letter-spacing: 0.5rem;
+        }
+    
+
+    .testimonials-container{
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .client{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap:4rem;
+            width:30%;
+            padding: 0.5rem;
+            padding-bottom: 0.5rem;
+            text-align: center;
+
+            img{
+                border-radius: 50%;
+                height: 7rem; 
+                width: 7rem;
+                margin-bottom: 3rem;
+            }
+
+            h6{
+                font-family: "Barlow", sans-serif;
+                font-weight: 600;
+                font-size: 1.3rem;
+                margin-bottom: 3rem;
+                width:85%;
+                text-align: center;
+                color:$VeryDarkGrayishBlue;
+            }
+
+            h3{
+                font-weight: 900;
+                font-size: 1.6rem;
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                margin-bottom: 7rem;
+            }
+        }
+    }
+}
+
+.gallery{
+    display: flex;
+    width: 100%;
+    // height: 100%;
+    img{
+        width:25%;
+        height: 100%;
+    }
+    
+}
+
+footer{
+    background-color: $DarkModerateCyan;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
+    color: $DarkDesaturatedCyan;
+
+    nav ul li{
+        list-style-type: none;
+        display: inline-block;
+        margin: 1rem 2rem 2rem 1rem;
+        font-weight: bold;
+        font-size:1.2rem;
+        font-family: "Barlow", sans-serif;
+    }
+
+    .social-links{
+        color: $DarkDesaturatedCyan;
+        margin-bottom: 1rem;
+    }
+
+    .footer-logo{
+        color:$DarkDesaturatedCyan;
+        width:10rem;
+    }
+    .fab{
+        color:$DarkDesaturatedCyan;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    body{
+        flex-direction: column;
+        width:100vw;
+        margin:0;
+    }
+
+    header{
+        width: 100vw;
+
+        nav{
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                width: 100vw;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .services-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .services{
+        display: flex;
+        flex-direction: column;
+
+        div{
+            width: 100vw;
+            text-align: center;
+            align-items: center;
+            
+        h2{
+            font-weight: 1200;
+            font-size: 4rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            width:100vw;
+        }
+
+        p{
+            margin-left:17%;
+            font-weight: 600;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            width:90%;
+            color:$VeryDarkGrayishBlue;
+        }
+        }
+        img{
+            width:100%;
+        }
+
+        
+    }
+    .services1{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .services3{
+        #subservice1{
+            width:100%;
+            text-align: center;
+
+            p{
+                margin: 0;
+                width: 90%;
+            }
+        }
+        #subservice2{
+            width:100%;
+
+            p{
+                margin: 0;
+                width: 90%;
+            }
+        }
+    }
+
+    .testimonials{
+
+        .testimonials-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: auto;
+        }
+    }
+
+    .gallery{
+        flex-direction: column;
+        width: 100%;
+
+        div{
+            display: flex;
+        }
+
+        img{
+            width:50%;
+        }
+    }
 }
