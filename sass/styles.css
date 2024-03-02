@@ -124,15 +124,16 @@ header .header-text img {
   text-align: left;
 }
 .services div h2 {
-  margin-left: 17%;
+  margin-left: 10%;
   font-weight: 1200;
   font-size: 4rem;
   text-align: left;
   margin-bottom: 1rem;
   width: 70%;
+  padding-top: 2rem;
 }
 .services div p {
-  margin-left: 17%;
+  margin-left: 10%;
   font-weight: 600;
   font-size: 1.5rem;
   text-align: left;
@@ -141,7 +142,7 @@ header .header-text img {
   color: hsl(213, 9%, 39%);
 }
 .services div a {
-  margin-left: 17%;
+  margin-left: 10%;
   font-weight: bolder;
   font-size: 1.5rem;
   text-align: left;
@@ -152,6 +153,7 @@ header .header-text img {
   width: fit-content;
   padding: 0.5rem;
   padding-bottom: 0;
+  margin-bottom: 4rem;
 }
 .services img {
   width: 50%;
@@ -193,6 +195,7 @@ header .header-text img {
   text-align: center;
   letter-spacing: -0.1rem;
   width: 55%;
+  margin-left: 22%;
 }
 .services3 #subservice2 {
   width: 50%;
@@ -205,6 +208,7 @@ header .header-text img {
   text-align: center;
   letter-spacing: -0.1rem;
   width: 55%;
+  margin-left: 22%;
 }
 
 .testimonials {
@@ -270,10 +274,14 @@ header .header-text img {
 .gallery {
   display: flex;
   width: 100%;
+  margin: 0;
+}
+.gallery div {
+  display: flex;
+  flex-direction: row;
 }
 .gallery img {
-  width: 25%;
-  height: 100%;
+  width: 50%;
 }
 
 footer {
@@ -316,7 +324,15 @@ footer .fab {
     margin: 0;
   }
   header {
-    width: 100vw;
+    width: 100%;
+    background: url(../images/mobile/image-header.jpg) center no-repeat;
+    background-size: cover;
+    padding-left: 0;
+  }
+  header nav {
+    padding: 0.5rem;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   header nav ul {
     display: flex;
@@ -328,6 +344,22 @@ footer .fab {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
+  header .header-text {
+    width: 100%;
+    text-align: center;
+    padding-top: 12rem;
+    font-family: "Fraunces", serif;
+    font-weight: 400;
+  }
+  header .header-text h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 5.5rem;
+  }
+  header .logo {
+    margin-left: 0;
+  }
   .services-container {
     display: flex;
     flex-direction: column;
@@ -337,26 +369,29 @@ footer .fab {
     flex-direction: column;
   }
   .services div {
-    width: 100vw;
+    width: 100%;
     text-align: center;
     align-items: center;
   }
   .services div h2 {
     font-weight: 1200;
-    font-size: 4rem;
+    font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
-    width: 100vw;
+    width: 80%;
     margin-left: 0;
   }
   .services div p {
     margin-left: 0;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
     margin-bottom: 1rem;
-    width: 90%;
+    width: 80%;
     color: hsl(213, 9%, 39%);
+  }
+  .services div a {
+    margin-left: 0;
   }
   .services img {
     width: 100%;
@@ -365,9 +400,14 @@ footer .fab {
     display: flex;
     flex-direction: column-reverse;
   }
+  .services1 img {
+    content: url("../images/mobile/image-transform.jpg");
+  }
   .services3 #subservice1 {
     width: 100%;
     text-align: center;
+    background: url(../images/mobile/image-graphic-design.jpg) center;
+    background-size: cover;
   }
   .services3 #subservice1 p {
     margin: 0;
@@ -375,6 +415,8 @@ footer .fab {
   }
   .services3 #subservice2 {
     width: 100%;
+    background: url(../images/mobile/image-photography.jpg) center;
+    background-size: cover;
   }
   .services3 #subservice2 p {
     margin: 0;
@@ -386,7 +428,41 @@ footer .fab {
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: auto;
+    width: 100%;
+  }
+  .testimonials .testimonials-container .client {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding-bottom: 0.5rem;
+    text-align: center;
+  }
+  .testimonials .testimonials-container .client img {
+    border-radius: 50%;
+    height: 7rem;
+    width: 7rem;
+    margin-bottom: 3rem;
+  }
+  .testimonials .testimonials-container .client h6 {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    width: 85%;
+    text-align: center;
+    color: hsl(213, 9%, 39%);
+  }
+  .testimonials .testimonials-container .client h3 {
+    font-weight: 900;
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .testimonials .testimonials-container .client p {
+    margin-bottom: 7rem;
   }
   .gallery {
     flex-direction: column;
@@ -394,8 +470,12 @@ footer .fab {
   }
   .gallery div {
     display: flex;
+    width: 100%;
   }
   .gallery img {
     width: 50%;
+  }
+  footer nav ul li {
+    font-size: 1rem;
   }
 }/*# sourceMappingURL=styles.css.map */
