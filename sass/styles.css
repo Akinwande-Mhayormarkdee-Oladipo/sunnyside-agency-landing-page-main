@@ -32,7 +32,7 @@ header nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 40px;
+  height: 80px;
   text-align: right;
   padding: 2rem;
 }
@@ -42,7 +42,6 @@ header nav ul {
   justify-content: flex-end;
   align-items: center;
   width: 100%;
-  height: 100%;
 }
 header nav ul li {
   list-style-type: none;
@@ -53,6 +52,8 @@ header nav ul li a {
   color: white;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
+  display: flex;
+  align-items: center;
 }
 header nav ul li a:hover {
   text-decoration: underline;
@@ -76,7 +77,19 @@ header nav .btn:hover {
   background-color: hsla(0, 0%, 100%, 0.2);
   color: hsl(0, 0%, 100%);
 }
-header nav .logo {
+header nav .checkbtn {
+  font-size: 30px;
+  color: #f7f7f7;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+header nav #check {
+  display: none;
+}
+header .logo {
   display: flex;
   align-items: center;
   text-align: center;
@@ -322,27 +335,54 @@ footer .fab {
     flex-direction: column;
     width: 100vw;
     margin: 0;
+    min-width: 396px;
   }
   header {
     width: 100%;
     background: url(../images/mobile/image-header.jpg) center no-repeat;
     background-size: cover;
     padding-left: 0;
-  }
-  header nav {
-    padding: 0.5rem;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  header nav ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 2rem;
-    width: 100vw;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  }
+  header nav {
+    width: 100%;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  header nav ul {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-direction: column;
+    height: 400px;
+    width: 80%;
+    background: white;
+    text-align: center;
+    top: 8rem;
+    left: -100%;
+    transition: all 0.5s ease;
+    gap: 0.5rem;
+  }
+  header nav ul li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  header nav ul li a {
+    display: block;
+    color: #524b4b;
+    font-size: 1.2rem;
+  }
+  header nav .checkbtn {
+    display: block;
+  }
+  header nav #check {
+    display: block;
   }
   header .header-text {
     width: 100%;
@@ -353,12 +393,19 @@ footer .fab {
   }
   header .header-text h1 {
     color: hsl(0, 0%, 100%);
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 5.5rem;
   }
   header .logo {
     margin-left: 0;
+  }
+  header .btn {
+    background-color: hsl(51, 100%, 49%);
+    color: black;
+    margin: 0;
+    padding: 0rem 1rem 0rem 1rem;
+    width: auto;
   }
   .services-container {
     display: flex;
@@ -477,5 +524,8 @@ footer .fab {
   }
   footer nav ul li {
     font-size: 1rem;
+  }
+  #check:checked ~ header nav ul {
+    left: 10rem;
   }
 }/*# sourceMappingURL=styles.css.map */
